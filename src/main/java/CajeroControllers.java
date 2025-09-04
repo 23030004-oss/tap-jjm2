@@ -64,7 +64,7 @@ public class CajeroControllers {
 
                     break;
                 case 9:
-                    view.mostrarMensaje("Cerrando sesión...");
+                    view.cerrar();
                     sessionActiva = false; // salir del bucle
                     break;
                 default:
