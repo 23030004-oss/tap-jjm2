@@ -2,8 +2,8 @@ package com.mycompany.models.Views;
 
 import java.util.Scanner;
 
-public class CajeroView {
-
+public class CajeroView <T> {
+ private T contenido;
     private Scanner scanner;
 
     // Constructor para inicializar un scanner
@@ -27,7 +27,7 @@ public class CajeroView {
         return scanner.nextLine();
     }
 
-    public void mostrarMenuPrincipal(String titular) {
+   public void mostrarMenuPrincipal(T titular) {
         System.out.println("-------------------------------------------");
         System.out.println("         Bienvenid@ " + titular);
         System.out.println("-------------------------------------------");
@@ -50,7 +50,7 @@ public class CajeroView {
         }
     }
 
-    public void mostrarSaldo(double saldo) {
+   public void mostrarSaldo(T saldo) {
         System.out.println("-------------------------------------------");
         System.out.println("     Tu saldo actual es de: $" + saldo);
         System.out.println("-------------------------------------------");
@@ -81,10 +81,10 @@ public class CajeroView {
     }
 
     // Mensajes personalizados
-    public void mostrarMensaje(String mensaje) {
-        System.out.println("✅ " + mensaje);
+   
+ public void mostrarMensaje(T mensaje) {
+        System.out.println("" + mensaje);
     }
-
    
 
     // Método para salir
